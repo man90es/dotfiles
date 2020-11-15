@@ -1,0 +1,61 @@
+! Transparent background
+! URxvt.depth: 32
+! URxvt.background:   rgb:1600/1600/1800
+
+! Special
+URxvt.background:   #21252b
+URxvt.foreground:   #c5c8c6
+URxvt.cursorColor:  #98c379
+
+! Black
+*.color0: 	#2d3139
+*.color8: 	#7f848e
+
+! Red
+*.color1: 	#e06c75
+*.color9: 	#f44747
+
+! Green
+*.color2: 	#98c379
+*.color10: 	#98c379
+
+! Yellow
+*.color3: 	#e5c07b
+*.color11: 	#e5c07b
+
+! Blue
+*.color4: 	#61afef
+*.color12: 	#61afef
+
+! Magenta
+*.color5: 	#c678dd
+*.color13: 	#7e0097
+
+! Cyan
+*.color6: 	#56b6c2
+*.color14: 	#56b6c2
+
+! White
+*.color7: 	#d7dae0
+*.color15: 	#c5c8c6
+
+! Special
+URxvt.scrollBar: 	false
+URxvt.internalBorder: 	30
+URxvt.cursorBlink:	true
+URxvt.font: 		xft:Monego Nerd Font:style=Regular
+URxvt.boldFont: 	xft:Monego Nerd Font:style=Bold
+URxvt.letterSpace: 	1
+
+! Ctrl+Left to jump to the previous word
+! Ctrl+Right to jump to the next word
+URxvt.keysym.Control-Up:    \033[1;5A
+URxvt.keysym.Control-Down:  \033[1;5B
+URxvt.keysym.Control-Left:  \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+
+! Shift+Up to scroll one line up
+! Shift+Down to scroll one line down
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+
