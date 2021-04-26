@@ -1,0 +1,143 @@
+# If I ever want to make my terminal transparent again
+# exec compton -b
+
+# No screen turning off when afk
+exec xset -dpms s off
+
+# Lock screen after autologin
+exec --no-startup-id ~/scripts/lock.sh
+
+# Set keyboard layouts
+exec --no-startup-id setxkbmap -model pc105 -layout pl,ru -variant ,phonetic -option grp:caps_toggle -option compose:ralt
+exec --no-startup-id "sh  -c 'sleep 5; exec xmodmap ~/.Xmodmap'"
+
+# Wallpaper
+exec --no-startup-id feh --bg-fill --no-fehbg ~/.config/wallpaper.png
+
+# Brightness control
+exec xbacklight -set 70
+bindsym XF86MonBrightnessUp   exec xbacklight -inc 15
+bindsym XF86MonBrightnessDown exec xbacklight -dec 15
+
+# Alt key as Mod
+set $mod Mod1
+
+# Drag floating windows with Mouse + Mod
+floating_modifier $mod
+
+# Launch terminal
+bindsym $mod+Return       exec "urxvt -mod alt"
+bindsym $mod+Shift+Return exec "urxvt -mod alt -e sh -c 'cd /; su -'"
+
+# Kill focused window
+bindsym $mod+Shift+q kill
+
+# Audio controls
+bindsym --release XF86AudioRaiseVolume exec "amixer -q sset Master 5%+"
+bindsym --release XF86AudioLowerVolume exec "amixer -q sset Master 5%-"
+bindsym --release XF86AudioMute        exec "amixer -q sset Master toggle"
+
+# Screencap hotkeys
+bindsym --release Print            exec maim -u  | xclip -selection clipboard -t image/png
+bindsym --release Shift+Print      exec maim -us | xclip -selection clipboard -t image/png
+bindsym --release Ctrl+Print       exec maim -u  ~/screencaps/$(date +%Y-%m-%d_%H:%M:%S).png
+bindsym --release Ctrl+Shift+Print exec maim -us ~/screencaps/$(date +%Y-%m-%d_%H:%M:%S).png
+
+# Program launcher
+bindsym $mod+d exec rofi -show run
+
+# Change focus
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
+bindsym $mod+Right focus right
+
+# Move focused window
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
+bindsym $mod+Shift+Right move right
+
+# Split
+bindsym $mod+h split v
+bindsym $mod+v split h
+
+# Fullscreen
+bindsym $mod+f fullscreen toggle
+
+# Toggle tiling / floating
+bindsym $mod+Shift+f floating toggle
+
+# Change focus between tiling / floating windows
+bindsym $mod+Ctrl+f focus mode_toggle
+
+# Switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# Automatic settings for specific apps
+for_window [class="discord"]       move container to workspace 5
+for_window [class="Brave-browser"] move container to workspace 2
+for_window [class="URxvt"]         move container to workspace 1
+for_window [class="Code"]          move container to workspace 3
+for_window [class="krita"]         move container to workspace 4
+
+# Autostart apps
+exec --no-startup-id discord
+exec --no-startup-id brave-browser-nightly
+exec --no-startup-id brave-browser-stable
+exec --no-startup-id transmission-daemon
+
+# Restart i3 inplace
+bindsym $mod+Shift+r restart
+
+# Lock screen
+bindsym $mod+Shift+l --release exec ~/scripts/lock.sh
+
+# Resize mode
+mode "resize" {
+	bindsym Left resize  shrink width 15 px or 15 ppt
+	bindsym Down resize  grow height 15 px or 15 ppt
+	bindsym Up resize    shrink height 15 px or 15 ppt
+	bindsym Right resize grow width 15 px or 15 ppt
+
+	bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Launch panel
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Gaps between tiles
+gaps inner 5
+
+# Only use click and hotkeys to change focus
+focus_follows_mouse no
+
+# Disable tile borders
+default_border          none
+default_floating_border none
+
+# Font
+font pango:Monego Nerd Font 10

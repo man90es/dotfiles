@@ -1,0 +1,21 @@
+{
+    "git.autofetch": true,
+    "go.toolsManagement.autoUpdate": true,
+    "editor.accessibilitySupport": "off",
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.insertSpaces": false,
+    "files.trimTrailingWhitespace": true,
+    "javascript.format.semicolons": "remove",
+    "editor.renderWhitespace": "none",
+    "git.confirmSync": false,
+    "window.menuBarVisibility": "hidden",
+    "window.customMenuBarAltFocus": false,
+    "files.insertFinalNewline": true,
+    "explorer.confirmDelete": false,
+    "update.mode": "manual",
+    "prettier.useTabs": true,
+    "prettier.tabWidth": 4,
+    "prettier.vueIndentScriptAndStyle": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+}
