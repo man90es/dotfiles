@@ -1,0 +1,3 @@
+# Bullet requirement is configured improperly in Godot
+# It also needs a "threads" use flag, not only specified ones
+sci-physics/bullet threads

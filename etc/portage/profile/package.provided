@@ -1,0 +1,5 @@
+# Using graphicsmagick as a drop-in replacement
+media-gfx/imagemagick-9999
+
+# I don't need this rubbish, even if it breaks dependencies
+net-print/cups-9999
