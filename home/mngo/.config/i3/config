@@ -104,8 +104,7 @@ for_window [class="krita"]         move container to workspace 4
 
 # Autostart apps
 exec --no-startup-id discord
-exec --no-startup-id brave-browser-nightly
-exec --no-startup-id brave-browser-stable
+exec --no-startup-id brave-bin
 exec --no-startup-id transmission-daemon
 
 # Restart i3 inplace
