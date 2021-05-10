@@ -46,3 +46,5 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=/'
 alias ranger='ranger --choosedir=/tmp/ranger-mngo-pwd; LASTDIR=`cat /tmp/ranger-mngo-pwd`; cd "$LASTDIR"'
 
 compdef config='git'
+
+soliloquy
