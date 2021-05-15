@@ -1,0 +1,2 @@
+modules_wlan0="wpa_supplicant"
+config_wlan0="dhcp"
