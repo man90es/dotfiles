@@ -99,7 +99,6 @@ for_window [class="krita"]         move container to workspace 4
 
 # Autostart apps
 exec --no-startup-id discord
-exec --no-startup-id brave-bin
 
 # Restart i3 inplace
 bindsym $mod+Shift+r restart
