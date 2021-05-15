@@ -2,7 +2,7 @@
 
 # uncomment this if wpa_supplicant starts up before your network interface
 # is ready and it causes issues
-# rc_want="dev-settle"
+rc_want="dev-settle"
 
 # Please check man 8 wpa_supplicant for more information about the options
 # wpa_supplicant accepts.
