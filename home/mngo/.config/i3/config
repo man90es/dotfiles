@@ -39,7 +39,7 @@ bindsym --release Ctrl+Print       exec maim -u  ~/screencaps/$(date +%Y-%m-%d_%
 bindsym --release Ctrl+Shift+Print exec maim -us ~/screencaps/$(date +%Y-%m-%d_%H:%M:%S).png
 
 # Program launcher
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun -show-icons
 
 # Change focus
 bindsym $mod+Left  focus left
@@ -133,3 +133,6 @@ default_floating_border none
 
 # Font
 font pango:Monego Nerd Font 10
+
+# Redshift
+exec redshift -l0:0 -t7500:7500
