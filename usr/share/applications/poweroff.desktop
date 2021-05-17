@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Shutdown
+Exec=/sbin/poweroff %F
+Icon=system-shutdown-symbolic
+Terminal=true
