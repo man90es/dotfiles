@@ -1,0 +1,2 @@
+# Disabling flac makes Audacity fail to compile
+media-sound/audacity flac -ladspa -lv2 -midi -portmixer -soundtouch -vst

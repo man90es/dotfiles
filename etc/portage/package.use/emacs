@@ -1,0 +1,1 @@
+app-editors/emacs -X -gif -png -jpeg -svg -tiff -alsa -inotify -ssl -gtk -xpm -gpm -gui
