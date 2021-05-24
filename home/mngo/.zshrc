@@ -35,12 +35,12 @@ PROMPT="%(!.%{$fg[red]%}.%{$fg[green]%})%n@%m%{$reset_color%} %{$fg[blue]%}%~%{$
 export PATH="$PATH:$HOME/scripts:$HOME/.local/bin"
 
 # Aliases
-alias e="emacs"
-alias back="cd $OLDPWD"
-alias cal="cal -m"
-alias yeet="rm -rf"
-alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=/"
-alias ranger="ranger --choosedir=/tmp/ranger-mngo-pwd; LASTDIR='cat /tmp/ranger-mngo-pwd'; cd $LASTDIR"
+alias e='emacs'
+alias back='cd $OLDPWD'
+alias cal='cal -m'
+alias yeet='rm -rf'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=/'
+alias ranger='ranger --choosedir=/tmp/ranger-$(whoami)-pwd; cd $(cat /tmp/ranger-$(whoami)-pwd); rm /tmp/ranger-$(whoami)-pwd'
 
 # Dotfiles config autocompletion
 compdef config="git"

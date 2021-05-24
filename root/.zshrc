@@ -26,11 +26,11 @@ export ARCHFLAGS="-arch x86_64"
 PROMPT="%(!.%{$fg[red]%}.%{$fg[green]%})%n@%m%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%}%{$fg[cyan]%} → %{$reset_color%}"
 
 # Aliases
-alias e="emacs"
-alias back="cd $OLDPWD"
-alias yeet="rm -rf"
-alias ranger="ranger --choosedir=/tmp/ranger-root-pwd; LASTDIR='cat /tmp/ranger-root-pwd'; cd $LASTDIR"
-alias erect="emerge -av"
-alias depclean="emerge -cav"
-alias webrsync="emerge-webrsync && layman -S"
-alias eupgrade="emerge -av --update --deep --changed-use @world"
+alias e='emacs'
+alias back='cd $OLDPWD'
+alias yeet='rm -rf'
+alias ranger='ranger --choosedir=/tmp/ranger-$(whoami)-pwd; cd $(cat /tmp/ranger-$(whoami)-pwd); rm /tmp/ranger-$(whoami)-pwd'
+alias erect='emerge -av'
+alias depclean='emerge -cav'
+alias webrsync='emerge-webrsync && layman -S'
+alias eupgrade='emerge -av --update --deep --changed-use @world'
