@@ -29,7 +29,7 @@ PROMPT="%(!.%{$fg[red]%}.%{$fg[green]%})%n@%m%{$reset_color%} %{$fg[blue]%}%~%{$
 alias e='emacs'
 alias back='cd $OLDPWD'
 alias yeet='rm -rf'
-alias ranger='ranger --choosedir=/tmp/ranger-$(whoami)-pwd; cd $(cat /tmp/ranger-$(whoami)-pwd); rm /tmp/ranger-$(whoami)-pwd'
+alias ranger='ranger --choosedir=/tmp/ranger-$(whoami)-pwd; cd "$(cat /tmp/ranger-$(whoami)-pwd)"; rm /tmp/ranger-$(whoami)-pwd'
 alias erect='emerge -av'
 alias depclean='emerge -cav'
 alias webrsync='emerge-webrsync && layman -S'
