@@ -1,0 +1,3 @@
+#!/bin/sh
+
+chmod 7551 /sbin/halt
