@@ -1,5 +1,5 @@
-# If I ever want to make my terminal transparent again
-# exec compton -b
+# Transparency support
+exec compton -b --backend glx --paint-on-overlay --vsync opengl-swc
 
 # Lock screen after autologin
 exec --no-startup-id ~/scripts/lock.sh
