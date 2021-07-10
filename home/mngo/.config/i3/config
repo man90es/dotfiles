@@ -35,8 +35,8 @@ bindsym --release XF86AudioMute        exec "amixer -q sset Master toggle"
 # Screencap hotkeys
 bindsym --release Print            exec maim -u  | xclip -selection clipboard -t image/png
 bindsym --release Shift+Print      exec maim -us | xclip -selection clipboard -t image/png
-bindsym --release Ctrl+Print       exec maim -u  ~/screencaps/$(date +%Y-%m-%d_%H:%M:%S).png
-bindsym --release Ctrl+Shift+Print exec maim -us ~/screencaps/$(date +%Y-%m-%d_%H:%M:%S).png
+bindsym --release Ctrl+Print       exec maim -u  ~/storageA/screencaps/$(date +%Y-%m-%d_%H:%M:%S).png
+bindsym --release Ctrl+Shift+Print exec maim -us ~/storageA/screencaps/$(date +%Y-%m-%d_%H:%M:%S).png
 
 # Program launcher
 bindsym $mod+d exec rofi -show drun -show-icons
