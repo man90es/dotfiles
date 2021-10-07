@@ -5,7 +5,7 @@ exec compton -b --backend glx --paint-on-overlay --vsync opengl-swc
 exec --no-startup-id ~/scripts/lock.sh
 
 # Set keyboard layouts
-exec --no-startup-id setxkbmap -model pc105 -layout pl,ru -variant ,phonetic -option grp:caps_toggle -option compose:ralt
+exec --no-startup-id setxkbmap -model pc105 -layout pl,ru -variant basic,phonetic -option grp:caps_toggle -option compose:rctrl
 
 # Wallpaper
 exec --no-startup-id feh --bg-fill --no-fehbg ~/.config/wallpaper.png
