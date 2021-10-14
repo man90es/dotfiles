@@ -1,5 +1,5 @@
 # Transparency support
-exec compton -b --backend glx --paint-on-overlay --vsync opengl-swc
+exec picom -b
 
 # Lock screen after autologin
 exec --no-startup-id ~/scripts/lock.sh
