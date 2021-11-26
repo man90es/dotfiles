@@ -46,5 +46,5 @@ alias ranger='ranger --choosedir=/tmp/ranger-$(whoami)-pwd; cd "$(cat /tmp/range
 compdef config="git"
 
 # Print word of the day on shell start
-soliloquy
+solilocli
 
