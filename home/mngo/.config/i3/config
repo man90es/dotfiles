@@ -1,14 +1,14 @@
-# Transparency support
-exec picom -b
+# Wallpaper
+exec --no-startup-id feh --bg-fill --no-fehbg ~/.config/wallpaper.png
 
 # Lock screen after autologin
 exec --no-startup-id ~/scripts/lock.sh
 
+# Transparency support
+exec picom -b
+
 # Set keyboard layouts
 exec --no-startup-id setxkbmap -model pc105 -layout pl,ru -variant basic,phonetic -option grp:caps_toggle -option compose:rctrl
-
-# Wallpaper
-exec --no-startup-id feh --bg-fill --no-fehbg ~/.config/wallpaper.png
 
 # Brightness control
 bindsym XF86MonBrightnessUp   exec xbacklight -inc 15
@@ -28,9 +28,12 @@ bindsym $mod+Shift+Return exec "urxvt -mod alt -e sh -c 'cd /; su -'"
 bindsym $mod+Shift+q kill
 
 # Audio controls
+exec --no-startup-id "amixer sset Capture 50%"
+exec --no-startup-id "amixer sset Capture nocap"
 bindsym --release XF86AudioRaiseVolume exec "amixer -q sset Master 5%+"
 bindsym --release XF86AudioLowerVolume exec "amixer -q sset Master 5%-"
 bindsym --release XF86AudioMute        exec "amixer -q sset Master toggle"
+bindsym --release XF86AudioMicMute     exec "amixer -q sset Capture toggle"
 
 # Screencap hotkeys
 bindsym --release Print            exec maim -u  | xclip -selection clipboard -t image/png
@@ -96,9 +99,6 @@ for_window [class="Brave-browser"] move container to workspace 2
 for_window [class="URxvt"]         move container to workspace 1
 for_window [class="VSCodium"]      move container to workspace 3
 for_window [class="krita"]         move container to workspace 4
-
-# Autostart apps
-exec --no-startup-id discord
 
 # Restart i3 inplace
 bindsym $mod+Shift+r restart
