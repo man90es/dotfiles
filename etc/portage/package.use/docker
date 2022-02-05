@@ -1,2 +1,3 @@
 # It's being split into 2 packages
-app-emulation/docker -cli
+# move app-emulation/docker app-containers/docker
+app-containers/docker -cli
