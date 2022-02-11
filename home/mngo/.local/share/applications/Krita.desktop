@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Krita
 GenericName=Image Editor
-Exec=/home/mngo/.local/bin/krita-4.4.3-x86_64.appimage
+Exec=/home/mngo/.local/bin/krita-5.0.2-x86_64.appimage
 Icon=Krita
 Type=Application
