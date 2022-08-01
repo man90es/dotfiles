@@ -134,5 +134,3 @@ default_floating_border none
 # Font
 font pango:Monego Nerd Font 10
 
-# Redshift
-exec redshift -l0:0 -t7500:7500
