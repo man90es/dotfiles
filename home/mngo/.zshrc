@@ -48,3 +48,7 @@ compdef config="git"
 # Print word of the day on shell start
 solilocli
 
+# pnpm
+export PNPM_HOME="/home/mngo/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
