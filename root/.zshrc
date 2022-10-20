@@ -35,4 +35,4 @@ alias ranger='ranger --choosedir=/tmp/ranger-$(whoami)-pwd; cd "$(cat /tmp/range
 alias erect='emerge -av --autounmask'
 alias depclean="emerge -cav --exclude=\"gentoo-sources:$(uname -r | awk -F- '{print $1}')\""
 alias esync='emaint sync -A'
-alias eupgrade='emerge -av --update --deep --changed-use @world'
+alias eupgrade='emerge -av --update --deep --changed-use --keep-going @world --exclude="sys-kernel/gentoo-sources"'
