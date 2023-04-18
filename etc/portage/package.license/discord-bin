@@ -1,1 +1,2 @@
-net-im/discord-bin all-rights-reserved
+# move net-im/discord-bin net-im/discord
+net-im/discord all-rights-reserved

@@ -1,1 +1,2 @@
-net-im/discord-bin ~amd64
+# move net-im/discord-bin net-im/discord
+net-im/discord ~amd64
