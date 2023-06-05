@@ -1,1 +1,2 @@
+# cycles requires tiff
 media-gfx/blender -game-engine cycles tiff openimageio
