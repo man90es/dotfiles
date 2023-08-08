@@ -12,3 +12,5 @@
 
 tmpfs   /tmp                tmpfs   rw,mode=1777,noatime,nosuid,nodev                    0 0
 tmpfs   /home/mngo/.cache   tmpfs   rw,mode=755,noatime,nosuid,nodev,uid=1000,gid=1000   0 0
+
+proc	/proc		    proc    defaults,hidepid=2
