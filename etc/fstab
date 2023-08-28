@@ -1,14 +1,11 @@
 # /etc/fstab: static file system information.
 # <fs>   <mountpoint>   <type>   <opts>   <dump/pass>
 
-/dev/nvme0n1p7   /             ext4    defaults,noatime   0 1
-/dev/nvme0n1p6   /boot         ext4    noauto,noatime     0 2
-/dev/nvme0n1p5   /mnt/driveD   ntfs3   noauto,noatime     0 3
-/dev/nvme0n1p3   /mnt/driveC   ntfs3   noauto,noatime     0 3
+/dev/nvme0n1p3   /             ext4    defaults,noatime   0 1
+/dev/nvme0n1p2   /boot         ext4    noauto,noatime     0 2
 /dev/nvme0n1p1   /boot/efi     vfat    noauto,noatime     0 2
 
 /dev/sda1   /mnt/storageA   ext4    auto,rw,noatime,nosuid,nodev                     0 3
-/dev/sda2   /mnt/storageB   ntfs3   auto,rw,noatime,nosuid,nodev,uid=1000,gid=1000   0 3
 
 tmpfs   /tmp                tmpfs   rw,mode=1777,noatime,nosuid,nodev                    0 0
 tmpfs   /home/mngo/.cache   tmpfs   rw,mode=755,noatime,nosuid,nodev,uid=1000,gid=1000   0 0
