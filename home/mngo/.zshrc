@@ -38,15 +38,11 @@ export PATH="$PATH:$HOME/scripts:$HOME/.local/bin"
 alias e='emacs'
 alias back='cd $OLDPWD'
 alias cal='cal -m'
-alias yeet='rm -rf'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=/'
 alias ranger='ranger --choosedir=/tmp/ranger-$(whoami)-pwd; cd "$(cat /tmp/ranger-$(whoami)-pwd)"; rm /tmp/ranger-$(whoami)-pwd'
 
 # Dotfiles config autocompletion
 compdef config="git"
-
-# Print word of the day on shell start
-solilocli
 
 # pnpm
 export PNPM_HOME="/home/mngo/.local/share/pnpm"

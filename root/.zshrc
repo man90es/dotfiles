@@ -30,7 +30,6 @@ export PATH="$PATH:$HOME/.local/bin"
 # Aliases
 alias e='emacs'
 alias back='cd $OLDPWD'
-alias yeet='rm -rf'
 alias ranger='ranger --choosedir=/tmp/ranger-$(whoami)-pwd; cd "$(cat /tmp/ranger-$(whoami)-pwd)"; rm /tmp/ranger-$(whoami)-pwd'
 alias erect='emerge -av --autounmask'
 alias depclean="emerge -cav --exclude=\"gentoo-sources:$(uname -r | awk -F- '{print $1}')\""
