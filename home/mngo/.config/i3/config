@@ -2,7 +2,7 @@
 exec --no-startup-id feh --bg-fill --no-fehbg ~/.config/wallpaper.png
 
 # Lock screen after autologin
-exec --no-startup-id ~/scripts/lock.sh
+exec --no-startup-id xscreensaver --no-splash && xscreensaver-command -lock
 
 # Transparency support
 exec picom -b
@@ -104,7 +104,7 @@ for_window [class="krita"]         move container to workspace 4
 bindsym $mod+Shift+r restart
 
 # Lock screen
-bindsym $mod+Shift+l --release exec ~/scripts/lock.sh
+bindsym $mod+Shift+l --release exec xscreensaver-command -lock
 
 # Resize mode
 mode "resize" {
@@ -124,13 +124,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Gaps between tiles
 gaps inner 5
 
-# Only use click and hotkeys to change focus
-focus_follows_mouse no
-
 # Disable tile borders
 default_border          none
 default_floating_border none
 
 # Font
 font pango:Monego Nerd Font 10
-
