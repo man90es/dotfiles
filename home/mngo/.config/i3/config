@@ -4,6 +4,8 @@ exec --no-startup-id feh --bg-fill --no-fehbg ~/.config/wallpaper.png
 # Lock screen after autologin
 exec --no-startup-id xscreensaver --no-splash && xscreensaver-command -lock
 
+exec --no-startup-id nm-applet
+
 # Transparency support
 exec picom -b
 
