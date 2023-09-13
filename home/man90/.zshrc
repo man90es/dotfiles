@@ -38,7 +38,6 @@ export PATH="$PATH:$HOME/scripts:$HOME/.local/bin"
 alias e='emacs'
 alias back='cd $OLDPWD'
 alias cal='cal -m'
-#alias yeet='rm -rf'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=/'
 alias ranger='ranger --choosedir=/tmp/ranger-$(whoami)-pwd; cd "$(cat /tmp/ranger-$(whoami)-pwd)"; rm /tmp/ranger-$(whoami)-pwd'
 
@@ -49,3 +48,11 @@ compdef config="git"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# Ignore duplicate history entries
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
