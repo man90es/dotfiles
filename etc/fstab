@@ -1,0 +1,25 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/nvme0n1p7
+UUID=280bb9cd-31ec-4761-bbe2-4f2021945104   /   ext4   rw,relatime   0 1
+
+# /dev/nvme0n1p6
+UUID=5075-1278   /boot   vfat   rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro   0 2
+
+# /dev/nvme0n1p1
+UUID=F4C4-098F   /boot/efi   vfat   rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro   0 2
+
+# /dev/nvme0n1p8
+UUID=0b857e4a-60b4-44f9-868a-20dcc2214263   /home   ext4   rw,relatime   0 2
+
+# /dev/sda1
+UUID=b2e6c184-0748-41a2-9aa1-9cf05c0df7e1   /mnt/storage   ext4   auto,rw,noatime,nosuid,nodev   0 3
+
+# hidepid=2 restricts regular users from viewing root processes
+proc   /proc   proc   defaults,hidepid=2
+
+# Mount RAM as tmp and ~/.cache to not wear down SSD
+tmpfs   /tmp                 tmpfs   rw,mode=1777,noatime,nosuid,nodev                    0 0
+tmpfs   /home/man90/.cache   tmpfs   rw,mode=755,noatime,nosuid,nodev,uid=1000,gid=1000   0 0 
