@@ -99,6 +99,9 @@ for_window [class="krita"]         move container to workspace 4
 # Restart i3 inplace
 bindsym $mod+Shift+r restart
 
+# Lock screen
+bindsym $mod+Shift+l --release exec xscreensaver-command -lock
+
 # Resize mode
 mode "resize" {
 	bindsym Left resize  shrink width 15 px or 15 ppt

@@ -1,0 +1,12 @@
+[Unit]
+Description=XScreenSaver
+After=graphical.target
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/xscreensaver -nosplash
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=default.target
