@@ -31,6 +31,9 @@ export PATH="$PATH:$HOME/.local/bin"
 alias e='emacs'
 alias back='cd $OLDPWD'
 alias ranger='ranger --choosedir=/tmp/ranger-$(whoami)-pwd; cd "$(cat /tmp/ranger-$(whoami)-pwd)"; rm /tmp/ranger-$(whoami)-pwd'
+alias esync='emaint sync -A'
+alias depclean='emerge -cav'
+alias eupgrade='emerge --ask --changed-use --deep @world'
 
 # Ignore duplicate history entries
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -39,3 +42,6 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
+
+EDITOR=emacs
+unsetopt BEEP
