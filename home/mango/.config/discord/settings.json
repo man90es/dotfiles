@@ -1,5 +1,5 @@
 {
-  "IS_MAXIMIZED": false,
+  "IS_MAXIMIZED": true,
   "IS_MINIMIZED": false,
   "WINDOW_BOUNDS": {
     "x": 5,
@@ -7,5 +7,18 @@
     "width": 1910,
     "height": 1037
   },
-  "SKIP_HOST_UPDATE": true
+  "SKIP_HOST_UPDATE": true,
+  "chromiumSwitches": {},
+  "BACKGROUND_COLOR": "#121214",
+  "DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING": true,
+  "openasar": {
+    "setup": true,
+    "noTyping": true
+  },
+  "trayBalloonShown": true,
+  "offloadAdmControls": true,
+  "enableHardwareAcceleration": true,
+  "openH264Enabled": true,
+  "DESKTOP_TTI_REMOVE_V8_CACHE_CLEAR": true,
+  "DESKTOP_TTI_UPDATE_BACKOFF_MAX_MS": 10000
 }
