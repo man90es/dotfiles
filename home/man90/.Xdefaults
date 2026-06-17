@@ -39,8 +39,8 @@ URxvt.cursorColor: #98c379
 URxvt.scrollBar:      false
 URxvt.internalBorder: 30
 URxvt.cursorBlink:    true
-URxvt.font:           xft:Monego Nerd Font:style=Regular
-URxvt.boldFont:       xft:Monego Nerd Font:style=Bold
+URxvt.font:           xft:Monego Nerd Font Fix:style=Regular
+URxvt.boldFont:       xft:Monego Nerd Font Fix:style=Bold
 URxvt.letterSpace:    1
 
 ! Ctrl+Left to jump to the previous word
